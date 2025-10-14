@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
         moveDirection = forward * vertical + right * horizontal;
         moveDirection.Normalize();
 
-        Vector3 movement = moveDirection * currentSpeed * Time.deltaTime;
+        Vector3 movement = moveDirection * currentSpeed * Time.unscaledDeltaTime;
         transform.position += movement;
     }
 }

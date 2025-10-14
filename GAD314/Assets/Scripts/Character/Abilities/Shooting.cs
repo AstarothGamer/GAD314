@@ -24,6 +24,4 @@ public class Shooting : MonoBehaviour
             timer = 0f;
         }
     }
-
-
 }
