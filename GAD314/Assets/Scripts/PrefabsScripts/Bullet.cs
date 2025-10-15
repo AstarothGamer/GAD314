@@ -1,8 +1,10 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    private int damage = 20;
     private int speed = 30;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,6 +37,16 @@ public class Bullet : MonoBehaviour
     
     public void OnTriggerEnter(Collider other)
     {
+        var target = other.GetComponent<Damageable>();
+
+        if (target != null)
+        {
+            target.Damage(damage);
+        }
+        else
+        {
+            //play sound of hit wall or whatever
+        }
         Destroy(gameObject);
     }
 }
