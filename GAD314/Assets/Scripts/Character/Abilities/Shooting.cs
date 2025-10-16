@@ -5,6 +5,7 @@ public class Shooting : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject firePoint;
+
     private float timer = 0.2f;
     // [SerializeField] 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,6 +22,7 @@ public class Shooting : MonoBehaviour
         {
             if (timer < 0.2f) return;
             Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
+            AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position);
             timer = 0f;
         }
     }
