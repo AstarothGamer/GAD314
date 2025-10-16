@@ -3,7 +3,47 @@ guid: 200345735dc93cd43ae1388d8a041e6b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grip
+    second: {fileID: 2100000, guid: 9394945fa739a694c82e57c8b35ff9e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: bdf4313aeecd46f4c9946028add6a837, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: f7729522b38f39f4bab94fe778606210, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 95e1e9ad618589f4e8b2b3063df4bf65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: becb1fd12cb23884e83205fdd087c0b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Primary Collor
+    second: {fileID: 2100000, guid: b96912ecee9c29a4f9a307dfe8bae9d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Secondary Color
+    second: {fileID: 2100000, guid: 6b2c0da3422a6bb468954ef3fb25d038, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trim
+    second: {fileID: 2100000, guid: ee4d0df15d85ee244bc8bfd1ce961919, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
