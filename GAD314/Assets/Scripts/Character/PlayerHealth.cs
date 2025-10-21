@@ -21,6 +21,19 @@ public class PlayerHealth : MonoBehaviour
         // ot you can add it into script DamageToPlayer when it calls Damage(), if we want to play sound at the accurate place where player gets hit
         if (currentHealth <= 0) StartCoroutine(Die());
     }
+
+    public void Heal(int amount)
+    {
+        currentHealth += amount;
+
+        //Here can be added also a sound of healling, like a sigh of relief
+        // or could be one of our voices, where one of us will say something like "I will not die today again"
+
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
     
     private IEnumerator Die()
     {
