@@ -8,15 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Grrapling scene.unity
     guid: 24532b585bff64c038f140c2754dc476
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Shooting scene.unity
     guid: bf954c2edce544430ae47a7908692790
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TimeStop scene.unity
     guid: 54b14c58eb1dd46d1b8d4118de93d7cd
+  - enabled: 1
+    path: Assets/Scenes/Starting Scene.unity
+    guid: 41099f5649e03a8449397c6e9b939fc2
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: d66e976ea6af0064db0c33ac676ba6cb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
