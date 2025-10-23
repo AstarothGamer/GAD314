@@ -40,10 +40,11 @@ public class PlayerHealth : MonoBehaviour
     
     private IEnumerator Die()
     {
+        // Time.timeScale = 0f;
         //Play some visual and audio effect
         //for example bloody window, player falls, pertical effects of blood everywhere, sounds of hard breath 
-        yield return new WaitForSeconds(1f);
-        // Cursor.lockState = CursorLockMode.None;
+        yield return new WaitForSecondsRealtime(1f);
+        Cursor.lockState = CursorLockMode.None;
         menuPanel.SetActive(true);
         //Here i'll add screen of death with loading from last saved moment once it will be ready
     }
