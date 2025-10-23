@@ -268,7 +268,7 @@ Transform:
   m_GameObject: {fileID: 102521030}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -1.5877694, y: -73.99, z: 0.35213}
+  m_LocalPosition: {x: -1.5877694, y: -75.24, z: 0.352}
   m_LocalScale: {x: 0.49397683, y: 1, z: 1.3928163}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1797,6 +1797,7 @@ GameObject:
   - component: {fileID: 855454811}
   - component: {fileID: 855454810}
   - component: {fileID: 855454809}
+  - component: {fileID: 855454813}
   m_Layer: 0
   m_Name: Teleporter
   m_TagString: Untagged
@@ -1893,6 +1894,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &855454813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855454808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f92c6dd3e9c74e48b5cb7c31c4cf933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &913298266
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,7 +3081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab80bce67220a468ab8d51f3233edf2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 100
   currentHealth: 0
 --- !u!1 &1440848255
 GameObject:

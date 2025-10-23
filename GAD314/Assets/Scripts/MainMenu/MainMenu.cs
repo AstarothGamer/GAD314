@@ -7,7 +7,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player")) 
+        SceneManager.LoadScene(2);
+        
+    }
     public void Exit()
     {
         Application.Quit();
