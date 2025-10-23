@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
+    [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth;
 
     void Start()
@@ -20,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
         // in transform just add transform.position , because it should be played at players position
         // ot you can add it into script DamageToPlayer when it calls Damage(), if we want to play sound at the accurate place where player gets hit
         if (currentHealth <= 0) StartCoroutine(Die());
+
+        Debug.Log("Player got " + damage + " damage. Now you have " + currentHealth + " hp");
     }
 
     public void Heal(int amount)

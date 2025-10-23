@@ -22,6 +22,8 @@ public class Damageable : MonoBehaviour
         {
             Die();
         }
+
+        Debug.Log("enemy has " + currentHealth);
     }
     
     public virtual void Die()
