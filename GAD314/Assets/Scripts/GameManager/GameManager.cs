@@ -21,9 +21,14 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+
     public void ExitToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+    
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }

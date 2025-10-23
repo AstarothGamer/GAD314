@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private GameObject menuPanel;
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth;
 
@@ -41,7 +42,9 @@ public class PlayerHealth : MonoBehaviour
     {
         //Play some visual and audio effect
         //for example bloody window, player falls, pertical effects of blood everywhere, sounds of hard breath 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
+        // Cursor.lockState = CursorLockMode.None;
+        menuPanel.SetActive(true);
         //Here i'll add screen of death with loading from last saved moment once it will be ready
     }
 }
