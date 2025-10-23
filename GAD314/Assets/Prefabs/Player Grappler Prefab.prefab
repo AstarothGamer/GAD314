@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5898499084985001589}
   - component: {fileID: 411152182398916575}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player Grappler Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
