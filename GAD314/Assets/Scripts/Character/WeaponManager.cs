@@ -5,7 +5,7 @@ public class WeaponManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainGun;
     [SerializeField] private GameObject sword;
-    [SerializeField] private GameObject grenadeLouncher;
+    // [SerializeField] private GameObject grenadeLouncher;
 
     void Start()
     {
@@ -24,19 +24,19 @@ public class WeaponManager : MonoBehaviour
         {
             mainGun.SetActive(true);
             sword.SetActive(false);
-            grenadeLouncher.SetActive(false);
+            // grenadeLouncher.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             mainGun.SetActive(false);
             sword.SetActive(true);
-            grenadeLouncher.SetActive(false);
+            // grenadeLouncher.SetActive(false);
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            mainGun.SetActive(false);
-            sword.SetActive(false);
-            grenadeLouncher.SetActive(true);
-        }
+        // else if(Input.GetKeyDown(KeyCode.Alpha3))
+        // {
+        //     mainGun.SetActive(false);
+        //     sword.SetActive(false);
+        //     grenadeLouncher.SetActive(true);
+        // }
     }
 }
