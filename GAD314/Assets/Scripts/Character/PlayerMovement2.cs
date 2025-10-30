@@ -24,7 +24,7 @@ public class PlayerMovement2 : MonoBehaviour
     private Vector3 moveVelocity;
     private float rotationY;
     private float rotationX;
-    private bool isGrounded;
+    public bool isGrounded;
     private bool isRunning;
     private float currentSpeed;
 
