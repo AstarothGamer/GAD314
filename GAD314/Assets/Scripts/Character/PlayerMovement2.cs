@@ -75,14 +75,14 @@ public class PlayerMovement2 : MonoBehaviour
     private void Movement()
     {
         float targetSpeed = isRunning ? runSpeed : walkSpeed;
-        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, 5f * Time.fixedDeltaTime);
+        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, 5f * Time.unscaledDeltaTime);
 
         Vector3 targetVelocity = moveInput * currentSpeed;
 
         if (moveInput.magnitude > 0.1f)
-            moveVelocity = Vector3.Lerp(moveVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
+            moveVelocity = Vector3.Lerp(moveVelocity, targetVelocity, acceleration * Time.unscaledDeltaTime);
         else
-            moveVelocity = Vector3.Lerp(moveVelocity, Vector3.zero, deceleration * Time.fixedDeltaTime);
+            moveVelocity = Vector3.Lerp(moveVelocity, Vector3.zero, deceleration * Time.unscaledDeltaTime);
 
         rb.linearVelocity = new Vector3(moveVelocity.x, rb.linearVelocity.y, moveVelocity.z);
     }
