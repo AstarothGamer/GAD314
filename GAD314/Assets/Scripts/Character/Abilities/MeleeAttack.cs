@@ -62,6 +62,8 @@ public class MeleeAttack : MonoBehaviour
         float halfDuration = swingDuration * 0.5f;
         float t = 0f;
 
+        AudioManager.Instance.PlaySoundAtPoint("Sword_Slash", transform.position);
+
         while (t < halfDuration)
         {
             t += Time.deltaTime;
@@ -70,8 +72,6 @@ public class MeleeAttack : MonoBehaviour
             ApplyWeaponRotation(Mathf.Lerp(0f, -swingAngle, curveVal));
             yield return null;
         }
-
-        // DoHitCheck();
 
         t = 0f;
         while (t < halfDuration)

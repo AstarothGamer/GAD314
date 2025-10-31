@@ -22,7 +22,7 @@ public class Shooting : MonoBehaviour
         {
             if (timer < 0.2f) return;
             Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
-            AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position);
+            AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position, 2f);
             timer = 0f;
         }
     }
