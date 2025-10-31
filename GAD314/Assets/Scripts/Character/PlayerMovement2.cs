@@ -32,7 +32,7 @@ public class PlayerMovement2 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.lockState = CursorLockMode.Locked;
 
         currentSpeed = walkSpeed;
     }
