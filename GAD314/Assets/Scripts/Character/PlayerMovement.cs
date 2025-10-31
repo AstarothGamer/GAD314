@@ -55,8 +55,8 @@ public class PlayerMovement : MonoBehaviour
     {
         // Store the player's original scale and lock the cursor
         playerScale = transform.localScale;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     private void FixedUpdate()
