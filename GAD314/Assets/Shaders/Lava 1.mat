@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lava Material
+  m_Name: Lava 1
   m_Shader: {fileID: -6465566751694194690, guid: 1b0e22326eb14cd4681f3ef19ae6ab53, type: 3}
-  m_Parent: {fileID: 2100000, guid: 4539179527355a442b4e2c6241afef4b, type: 2}
+  m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -23,16 +23,32 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _HighligtsSpread: 3.5
-    - _MovementSpeed: 1.5
+    - _HighligtsSpread: 2.5
+    - _MovementSpeed: 0.8
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _StartTime: 15
     m_Colors:
-    - _HighlightsColor: {r: 1, g: 0.7830597, b: 0.08867919, a: 0}
+    - _BaseColor: {r: 1, g: 0.09595469, b: 0, a: 0}
+    - _HighlightsColor: {r: 0.77254903, g: 0.5384062, b: 0.011764725, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &424815203971465582
+--- !u!114 &6556507943719133065
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
