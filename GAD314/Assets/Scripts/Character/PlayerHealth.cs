@@ -1,15 +1,18 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private GameObject menuPanel;
+    // [SerializeField] private GameObject menuPanel;
     [SerializeField] private int maxHealth = 100;
     [SerializeField] public int currentHealth;
+    [SerializeField] private TMP_Text healthText;
 
     void Start()
     {
         currentHealth = maxHealth;
+        healthText.text = currentHealth.ToString();
     }
 
     public void Damage(int damage)
@@ -23,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0) StartCoroutine(Die());
 
         Debug.Log("Player got " + damage + " damage. Now you have " + currentHealth + " hp");
+        healthText.text = currentHealth.ToString();
     }
 
     public void Heal(int amount)
@@ -32,10 +36,11 @@ public class PlayerHealth : MonoBehaviour
         //Here can be added also a sound of healling, like a sigh of relief
         // or could be one of our voices, where one of us will say something like "I will not die today again"
 
-        if(currentHealth > maxHealth)
+        if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
+        healthText.text = currentHealth.ToString();
     }
     
     private IEnumerator Die()
@@ -45,7 +50,7 @@ public class PlayerHealth : MonoBehaviour
         //for example bloody window, player falls, pertical effects of blood everywhere, sounds of hard breath 
         yield return new WaitForSecondsRealtime(1f);
         Cursor.lockState = CursorLockMode.None;
-        menuPanel.SetActive(true);
+        // menuPanel.SetActive(true);
         //Here i'll add screen of death with loading from last saved moment once it will be ready
     }
 }
