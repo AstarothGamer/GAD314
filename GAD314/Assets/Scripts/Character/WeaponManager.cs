@@ -5,6 +5,10 @@ public class WeaponManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainGun;
     [SerializeField] private GameObject sword;
+
+    public bool katana;
+    public bool gun;
+    public bool grapplingGun;
     // [SerializeField] private GameObject grenadeLouncher;
 
     void Start()

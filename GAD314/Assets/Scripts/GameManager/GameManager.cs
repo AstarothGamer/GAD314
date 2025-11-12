@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
+    public bool savedSO;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

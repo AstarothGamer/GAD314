@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int currentHealth;
+    [SerializeField] public int currentHealth;
 
     void Start()
     {
