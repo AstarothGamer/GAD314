@@ -1,23 +1,13 @@
-using System;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.InputSystem.Haptics;
 
 public class CheckPoint : MonoBehaviour
 {
-    [SerializeField] private GameObject checkPointPanel;
-    [SerializeField] PlayerDataSO playerSO;
+    public PlayerDataSO playerSO;
 
-    [SerializeField] WeaponManager weaponManager;
-    [SerializeField] PlayerHealth playerHealth;
-    [SerializeField] Shooting gun;
-    Vector3 checkBox = new Vector3(1f, 1f, 1f);
-    RaycastHit hit;
+    WeaponManager weaponManager;
+    PlayerHealth playerHealth;
+    Shooting gun;
 
-    void FixedUpdate()
-    {
-        CheckingRaycast();
-    }
 
     public void SaveData()
     {
@@ -30,20 +20,5 @@ public class CheckPoint : MonoBehaviour
 
         playerSO.ammoCage = gun.ammoCage;
         playerSO.ammoReserve = gun.ammoReserve;
-    }
-
-    private void CheckingRaycast()
-    {
-        if (Physics.BoxCast(transform.position, checkBox, transform.forward, out hit))
-        {
-            if (hit.collider.name == "Player")
-            {
-                checkPointPanel.SetActive(true);
-            }
-        }
-        else
-        {
-            checkPointPanel.SetActive(false);
-        }
     }
 }

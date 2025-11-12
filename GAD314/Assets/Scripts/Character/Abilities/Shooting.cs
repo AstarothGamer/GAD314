@@ -1,15 +1,13 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject firePoint;
-    [SerializeField] private TMP_Text ammoText;
 
-    public int ammoCage = 30;
-    public int ammoReserve = 60;
+    public int ammoCage;
+    public int ammoReserve;
 
     private float timer = 0.2f;
     // [SerializeField] 
@@ -33,7 +31,6 @@ public class Shooting : MonoBehaviour
             if (timer < 0.2f) return;
             Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
             AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position, 2f);
-            ammoCage -= 1;
             timer = 0f;
         }
 
@@ -42,13 +39,10 @@ public class Shooting : MonoBehaviour
             if (ammoCage < 30)
             {
                 //play annimation of reload
-                //play sound of reload
 
                 StartCoroutine(Reload());
             }
         }
-
-        ammoText.text = ammoCage + "/" + ammoReserve;
     }
     
     public IEnumerator Reload()
