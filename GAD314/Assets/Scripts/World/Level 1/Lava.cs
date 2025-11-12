@@ -5,7 +5,9 @@ public class Lava : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         var player = other.GetComponent<PlayerHealth>();
-
-        player.Damage(100);
+        if(other.includeLayers == 7)
+        {
+            player.Damage(100);
+        }
     }
 }
