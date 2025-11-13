@@ -16,7 +16,7 @@ public class CheckPoint : MonoBehaviour
 
     void FixedUpdate()
     {
-        CheckingRaycast();
+        // CheckingRaycast();
     }
 
     public void SaveData()
@@ -32,16 +32,31 @@ public class CheckPoint : MonoBehaviour
         playerSO.ammoReserve = gun.ammoReserve;
     }
 
-    private void CheckingRaycast()
+    // private void CheckingRaycast()
+    // {
+    //     if (Physics.BoxCast(transform.position, checkBox, transform.forward, out hit))
+    //     {
+    //         if (hit.collider.name == "Player")
+    //         {
+    //             checkPointPanel.SetActive(true);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         checkPointPanel.SetActive(false);
+    //     }
+    // }
+
+    public void OTriggerEnter(Collider other)
     {
-        if (Physics.BoxCast(transform.position, checkBox, transform.forward, out hit))
+        if (other.includeLayers == 7)
         {
-            if (hit.collider.name == "Player")
-            {
-                checkPointPanel.SetActive(true);
-            }
+            checkPointPanel.SetActive(true);
         }
-        else
+    }
+    public void OiggerExit(Collider other)
+    {
+        if (other.includeLayers == 7)
         {
             checkPointPanel.SetActive(false);
         }

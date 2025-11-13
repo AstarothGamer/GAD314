@@ -8,7 +8,13 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     [SerializeField] public int currentHealth;
     [SerializeField] private TMP_Text healthText;
+    [SerializeField] private PlayerDataSO playerSO;
 
+    void Awake()
+    {
+        transform.position = playerSO.playerPosition;
+        currentHealth = playerSO.hp;
+    }
     void Start()
     {
         currentHealth = maxHealth;
