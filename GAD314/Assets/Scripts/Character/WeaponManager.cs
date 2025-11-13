@@ -5,15 +5,18 @@ public class WeaponManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainGun;
     [SerializeField] private GameObject sword;
+    [SerializeField] private PlayerDataSO playerSO;
 
     public bool katana;
     public bool gun;
     public bool grapplingGun;
     // [SerializeField] private GameObject grenadeLouncher;
 
-    void Start()
+    void Awake()
     {
-        
+        gun = playerSO.gun;
+        katana = playerSO.katana;
+        grapplingGun = playerSO.grapplingGun;
     }
 
     // Update is called once per frame

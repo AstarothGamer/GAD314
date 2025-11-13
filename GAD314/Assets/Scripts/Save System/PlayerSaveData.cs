@@ -16,15 +16,15 @@ public class PlayerDataSO : ScriptableObject
 
     public void ResetData()
     {
-        playerPosition = Vector3.zero;
-        hp = 0;
+        playerPosition = new Vector3(776.192993f,6.98099995f,1439.78003f);
+        hp = 100;
         gun = false;
         katana = false;
         grapplingGun = false;
         key = false;
 
-        ammoCage = 0;
-        ammoReserve = 0;
+        ammoCage = 30;
+        ammoReserve = 60;
     }
 }
 
