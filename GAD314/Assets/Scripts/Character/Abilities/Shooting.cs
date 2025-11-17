@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject firePoint;
     [SerializeField] private TMP_Text ammoText;
+    [SerializeField] private PlayerDataSO playerSO;
 
     public int ammoCage = 30;
     public int ammoReserve = 60;
@@ -14,11 +15,11 @@ public class Shooting : MonoBehaviour
     private float timer = 0.2f;
     // [SerializeField] 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        ammoCage = playerSO.ammoCage;
+        ammoReserve = playerSO.ammoReserve;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -53,16 +54,20 @@ public class Shooting : MonoBehaviour
     
     public IEnumerator Reload()
     {
-        yield return new WaitForSecondsRealtime(2f);
-
         int i = 30 - ammoCage;
+        int r = ammoCage;
+        ammoCage = 0;
+        AudioManager.Instance.PlaySoundAtPoint("Gun_Reload", transform.position);
+        yield return new WaitForSecondsRealtime(1f);
+
+        
         
         if (ammoReserve < i)
         {
             i = ammoReserve;
         }
         
-        ammoCage += i;
+        ammoCage = r + i;
         ammoReserve -= i;
     }
 }

@@ -6,17 +6,31 @@ using UnityEngine.InputSystem.Haptics;
 public class CheckPoint : MonoBehaviour
 {
     [SerializeField] private GameObject checkPointPanel;
+    // [SerializeField] private GameObject gunPickUp;
+    // [SerializeField] private GameObject swordPickUp;
     [SerializeField] PlayerDataSO playerSO;
 
     [SerializeField] WeaponManager weaponManager;
     [SerializeField] PlayerHealth playerHealth;
     [SerializeField] Shooting gun;
-    Vector3 checkBox = new Vector3(1f, 1f, 1f);
-    RaycastHit hit;
+    [SerializeField] Camera cam;
+    [SerializeField] private bool inArea = false;
 
     void FixedUpdate()
     {
         CheckingRaycast();
+        
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(inArea == true)
+            {
+                SaveData();
+            }
+        }
     }
 
     public void SaveData()
@@ -30,20 +44,28 @@ public class CheckPoint : MonoBehaviour
 
         playerSO.ammoCage = gun.ammoCage;
         playerSO.ammoReserve = gun.ammoReserve;
+
+        Debug.Log("Data saved");
     }
 
     private void CheckingRaycast()
     {
-        if (Physics.BoxCast(transform.position, checkBox, transform.forward, out hit))
+        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 4f))
         {
-            if (hit.collider.name == "Player")
+            if (hit.collider.CompareTag("CheckPoint"))
             {
                 checkPointPanel.SetActive(true);
+                inArea = true;
             }
+        
         }
         else
         {
             checkPointPanel.SetActive(false);
+            inArea = false;
         }
     }
 }

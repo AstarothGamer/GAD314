@@ -5,15 +5,29 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     // [SerializeField] private GameObject menuPanel;
+    [SerializeField] private GameObject deathPanel;
+    [SerializeField] private GameObject UI;
     [SerializeField] private int maxHealth = 100;
     [SerializeField] public int currentHealth;
     [SerializeField] private TMP_Text healthText;
 
-    void Start()
+    [SerializeField] private PlayerDataSO playerSO;
+
+
+
+    void Awake()
     {
         currentHealth = maxHealth;
         healthText.text = currentHealth.ToString();
+        // transform.position = playerSO.playerPosition;
+        currentHealth = playerSO.hp;
     }
+    void Start()
+    {
+        // transform.position = playerSO.playerPosition;
+    }
+
+
 
     public void Damage(int damage)
     {
@@ -50,7 +64,8 @@ public class PlayerHealth : MonoBehaviour
         //for example bloody window, player falls, pertical effects of blood everywhere, sounds of hard breath 
         yield return new WaitForSecondsRealtime(1f);
         Cursor.lockState = CursorLockMode.None;
-        // menuPanel.SetActive(true);
+        UI.SetActive(false);
+        deathPanel.SetActive(true);
         //Here i'll add screen of death with loading from last saved moment once it will be ready
     }
 }

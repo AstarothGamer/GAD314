@@ -4,11 +4,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
+    [SerializeField] private PlayerDataSO playerSO;
+    [SerializeField] private GameObject player;
     
     public bool savedSO;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        // player.transform.position = playerSO.playerPosition;
     }
     // Update is called once per frame
     void Update()
@@ -26,6 +29,17 @@ public class GameManager : MonoBehaviour
                 menuPanel.SetActive(false);
             }
         }
+    }
+
+    public void LoadLastSave()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void ReloadScene()
+    {
+        playerSO.ResetData();
+        SceneManager.LoadScene(1);
     }
     
     public void ExitToMainMenu()

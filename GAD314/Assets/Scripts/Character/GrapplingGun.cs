@@ -15,6 +15,7 @@ public class GrapplingGun : MonoBehaviour
     void Awake()
     {
         lr = GetComponent<LineRenderer>();
+        usingGrappling = false;
     }
 
     void Update()
