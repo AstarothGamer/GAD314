@@ -45,6 +45,8 @@ public class CheckPoint : MonoBehaviour
         playerSO.ammoCage = gun.ammoCage;
         playerSO.ammoReserve = gun.ammoReserve;
 
+        playerSO.saved = true;
+
         Debug.Log("Data saved");
     }
 

@@ -5,9 +5,17 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private PlayerDataSO playerSO;
-    [SerializeField] private GameObject player;
+    // [SerializeField] private GameObject player;
     
     public bool savedSO;
+
+    void Awake()
+    {
+        if(!playerSO.saved)
+        {
+            playerSO.ResetData();
+        }
+    }
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

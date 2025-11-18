@@ -10,6 +10,7 @@ public class PlayerDataSO : ScriptableObject
     public bool katana;
     public bool grapplingGun;
     public bool key;
+    public bool saved;
 
     public int ammoCage;
     public int ammoReserve;
@@ -22,6 +23,7 @@ public class PlayerDataSO : ScriptableObject
         katana = false;
         grapplingGun = false;
         key = false;
+        saved = false;
 
         ammoCage = 30;
         ammoReserve = 60;
