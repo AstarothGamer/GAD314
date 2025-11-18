@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public float textSpeed = 0.05f;
+    public string nextSceneName;
 
     private Dialogue currentDialogue;
     private int currentLineIndex;
@@ -95,5 +97,11 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
         dialogueBox.SetActive(false);
+
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
     }
 }
+
