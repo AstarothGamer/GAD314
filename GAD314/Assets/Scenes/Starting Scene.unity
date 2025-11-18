@@ -37385,38 +37385,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 846331627598132505, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031765622543084052, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203886526401957316, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.008
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203886526401957316, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.024
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203886526401957316, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.332
-      objectReference: {fileID: 0}
-    - target: {fileID: 1448054285222476253, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1450890895278447136, guid: a738beb6b8806c64f974bec378194000, type: 3}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1082353680}
-    - target: {fileID: 4569001841132859791, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6099918802686722921, guid: a738beb6b8806c64f974bec378194000, type: 3}
       propertyPath: UI
       value: 
@@ -37429,34 +37401,6 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 818949348}
-    - target: {fileID: 7049431508334715353, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7049431508334715353, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7049431508334715353, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7049431508334715353, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8904344803839431453, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8904344803839431453, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8904344803839431453, guid: a738beb6b8806c64f974bec378194000, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.8
-      objectReference: {fileID: 0}
     - target: {fileID: 8904344803839431453, guid: a738beb6b8806c64f974bec378194000, type: 3}
       propertyPath: m_LocalPosition.x
       value: 776.193

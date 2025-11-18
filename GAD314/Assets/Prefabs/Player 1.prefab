@@ -404,7 +404,7 @@ Transform:
   m_GameObject: {fileID: 5597705947266319018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.008, y: 0.024, z: 0.167}
+  m_LocalPosition: {x: 0.008, y: 0.024, z: -0.04}
   m_LocalScale: {x: 0.5555556, y: 0.5555556, z: 0.5555556}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -639,6 +639,10 @@ PrefabInstance:
       propertyPath: weaponTransform
       value: 
       objectReference: {fileID: 631940952782485084}
+    - target: {fileID: 5425651308749244911, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5895530091287146676, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03257215
@@ -686,6 +690,18 @@ PrefabInstance:
     - target: {fileID: 6528796473931049486, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934160630121185725, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823117592304964212, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195600333435276665, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
