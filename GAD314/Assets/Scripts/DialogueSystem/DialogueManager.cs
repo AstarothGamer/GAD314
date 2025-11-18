@@ -1,17 +1,19 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogueBox;
-    public Image characterImage;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public float textSpeed = 0.05f;
 
     private Dialogue currentDialogue;
     private int currentLineIndex;
     private bool isDialogueActive;
+    private bool isTyping;
+    private Coroutine typingCoroutine;
 
     void Start()
     {
@@ -20,7 +22,19 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (isDialogueActive && Input.GetKeyDown(KeyCode.Space))
+        if (isDialogueActive && Input.GetMouseButtonDown(0))
+        {
+            HandleMouseClick();
+        }
+    }
+
+    void HandleMouseClick()
+    {
+        if (isTyping)
+        {
+            FinishTyping();
+        }
+        else
         {
             DisplayNextLine();
         }
@@ -45,11 +59,36 @@ public class DialogueManager : MonoBehaviour
 
         Dialogue.DialogueLine currentLine = currentDialogue.dialogueLines[currentLineIndex];
 
-        characterImage.sprite = currentLine.characterImage;
         nameText.text = currentLine.characterName;
-        dialogueText.text = currentLine.dialogueText;
+        typingCoroutine = StartCoroutine(TypeText(currentLine.dialogueText));
 
         currentLineIndex++;
+    }
+
+    IEnumerator TypeText(string text)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+
+        foreach (char letter in text.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(textSpeed);
+        }
+
+        isTyping = false;
+    }
+
+    void FinishTyping()
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+
+        Dialogue.DialogueLine currentLine = currentDialogue.dialogueLines[currentLineIndex - 1];
+        dialogueText.text = currentLine.dialogueText;
+        isTyping = false;
     }
 
     void EndDialogue()
