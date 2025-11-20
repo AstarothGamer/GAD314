@@ -9,6 +9,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private TMP_Text ammoText;
     [SerializeField] private PlayerDataSO playerSO;
     [SerializeField] private WeaponClipping clipFix;
+    [SerializeField] private Camera playerCamera;
 
     public int ammoCage = 30;
     public int ammoReserve = 60;
@@ -35,9 +36,7 @@ public class Shooting : MonoBehaviour
                     return;
                 }
                 if (timer < 0.2f) return;
-                Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
-                AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position, 2f);
-                ammoCage -= 1;
+                Shoot();
                 timer = 0f;
             }
         }
@@ -54,6 +53,31 @@ public class Shooting : MonoBehaviour
         }
 
         ammoText.text = ammoCage + "/" + ammoReserve;
+    }
+
+    private void Shoot()
+    {
+        ammoCage--;
+
+        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+
+        Vector3 targetPoint;
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 1000f))
+        {
+            targetPoint = hit.point;
+        }
+        else
+        {
+            targetPoint = ray.GetPoint(1000f);
+        }
+
+        Vector3 dir = (targetPoint - firePoint.transform.position).normalized;
+
+        Quaternion rot = Quaternion.LookRotation(dir);
+
+        Instantiate(bulletPrefab, firePoint.transform.position, rot);
+        AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position, 2f);
     }
     
     public IEnumerator Reload()

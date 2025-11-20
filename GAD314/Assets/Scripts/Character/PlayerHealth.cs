@@ -55,6 +55,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
         healthText.text = currentHealth.ToString();
+        Debug.Log("Healed to " + amount);
     }
     
     private IEnumerator Die()

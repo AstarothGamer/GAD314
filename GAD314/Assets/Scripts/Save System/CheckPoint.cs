@@ -19,7 +19,6 @@ public class CheckPoint : MonoBehaviour
     void FixedUpdate()
     {
         CheckingRaycast();
-        
     }
 
     void Update()

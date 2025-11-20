@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 411152182398916575}
   - component: {fileID: 8009397674770943032}
   - component: {fileID: 6099918802686722921}
+  - component: {fileID: 1042082150945328134}
   m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
@@ -250,6 +251,23 @@ MonoBehaviour:
   currentHealth: 0
   healthText: {fileID: 0}
   playerSO: {fileID: 11400000, guid: b93c007cfd5c8491aa74ddacf4b907c9, type: 2}
+--- !u!114 &1042082150945328134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693286476981696016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30fadcdb3efbc4d9e96f3fc8182ac8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpPanel: {fileID: 0}
+  pickUpText: {fileID: 0}
+  weaponManager: {fileID: 8009397674770943032}
+  cam: {fileID: 7049431508334715353}
+  inArea: 0
 --- !u!1 &1362464365024607107
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 476246469378380347, guid: 77076f199ee15704f8a31244e844456a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995338435552430209, guid: 77076f199ee15704f8a31244e844456a, type: 3}
       propertyPath: m_LocalScale.x
@@ -826,6 +844,10 @@ PrefabInstance:
       propertyPath: playerSO
       value: 
       objectReference: {fileID: 11400000, guid: b93c007cfd5c8491aa74ddacf4b907c9, type: 2}
+    - target: {fileID: 7128100886667244045, guid: 77076f199ee15704f8a31244e844456a, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 7049431508334715353}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
