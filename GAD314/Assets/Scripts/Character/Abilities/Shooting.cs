@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private GameObject firePoint;
     [SerializeField] private TMP_Text ammoText;
     [SerializeField] private PlayerDataSO playerSO;
+    [SerializeField] private WeaponClipping clipFix;
 
     public int ammoCage = 30;
     public int ammoReserve = 60;
@@ -26,16 +27,19 @@ public class Shooting : MonoBehaviour
         timer += Time.deltaTime;
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            if(ammoCage < 1)
+            if(!clipFix.isHidden)
             {
-                //play sound of empty cage
-                return;
+                if(ammoCage < 1)
+                {
+                    //play sound of empty cage
+                    return;
+                }
+                if (timer < 0.2f) return;
+                Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
+                AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position, 2f);
+                ammoCage -= 1;
+                timer = 0f;
             }
-            if (timer < 0.2f) return;
-            Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
-            AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position, 2f);
-            ammoCage -= 1;
-            timer = 0f;
         }
 
         if (Input.GetKeyDown(KeyCode.R))
