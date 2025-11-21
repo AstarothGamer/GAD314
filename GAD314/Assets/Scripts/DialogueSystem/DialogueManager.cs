@@ -17,9 +17,11 @@ public class DialogueManager : MonoBehaviour
     private bool isTyping;
     private Coroutine typingCoroutine;
 
+
+   
     void Start()
     {
-        dialogueBox.SetActive(false);
+        
     }
 
     void Update()
