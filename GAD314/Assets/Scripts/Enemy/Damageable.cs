@@ -16,6 +16,7 @@ public class Damageable : MonoBehaviour
         if (isDead || damage <= 0) return;
 
         currentHealth -= damage;
+        Debug.Log("Enemy got damage " + damage);
         //Play sound of hit
 
         if (currentHealth <= 0)
