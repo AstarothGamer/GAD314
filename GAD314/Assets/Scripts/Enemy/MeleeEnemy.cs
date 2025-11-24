@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class MeleeEnemy : Damageable
 {
-    public float detectionRange = 15f;   
+    public float detectionRange = 10f;   
     public float attackRange = 2.2f;    
     public float attackCooldown = 1.2f;  
     public int damage = 15;          
@@ -57,8 +57,7 @@ public class MeleeEnemy : Damageable
         currentState = newState;
         if (animator != null)
         {
-            animator.SetBool("isMoving", newState == State.Chasing);
-            animator.SetBool("isAttacking", newState == State.Attacking);
+            animator.SetBool("IsWalking", newState == State.Chasing);
         }
     }
 
@@ -74,8 +73,12 @@ public class MeleeEnemy : Damageable
         if (distance <= attackRange)
         {
             agent.ResetPath();
-            SwitchState(State.Attacking);
-            StartCoroutine(AttackRoutine());
+            if(!isAttacking)
+            {
+                isAttacking = true;
+                SwitchState(State.Attacking);
+                StartCoroutine(AttackRoutine());
+            } 
         }
         else
         {
@@ -109,7 +112,7 @@ public class MeleeEnemy : Damageable
 
             yield return null;
         }
-
+        isAttacking = false;
         SwitchState(State.Chasing);
     }
 

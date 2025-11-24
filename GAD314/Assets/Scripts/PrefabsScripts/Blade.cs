@@ -6,12 +6,13 @@ public class Blade : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if( attack.isSwinging == true)
+        if(attack.isSwinging)
         {
             var damageable = other.GetComponent<Damageable>();
             if (damageable != null)
             {
                 damageable.Damage(attack.damage);
+                
             }
         }
     }

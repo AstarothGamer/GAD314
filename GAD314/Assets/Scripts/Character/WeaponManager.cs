@@ -7,8 +7,8 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private GameObject sword;
     [SerializeField] private PlayerDataSO playerSO;
 
-    public bool katana;
-    public bool gun;
+    public bool katana = false;
+    public bool gun = false;
     public bool grapplingGun;
     bool gunOn = false;
     bool katanaOn = false;
@@ -36,7 +36,7 @@ public class WeaponManager : MonoBehaviour
                 mainGun.SetActive(false);
                 gunOn = false;
             }
-            else
+            else if (gun)
             {
                 katanaOn = false;
                 gunOn = true;
@@ -53,7 +53,7 @@ public class WeaponManager : MonoBehaviour
                 katanaOn = false;
                 sword.SetActive(false);
             }
-            else
+            else if (katana)
             {
                 gunOn = false;
                 katanaOn = true;

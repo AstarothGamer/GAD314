@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lava 1
-  m_Shader: {fileID: -6465566751694194690, guid: 1b0e22326eb14cd4681f3ef19ae6ab53, type: 3}
+  m_Name: Portal Shader
+  m_Shader: {fileID: -6465566751694194690, guid: 85a0d779bdb3ea747afc6414c8c101d5, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -39,16 +39,16 @@ Material:
     m_Ints: []
     m_Floats:
     - _HighligtsSpread: 2.5
-    - _MovementSpeed: 0.8
+    - _MovementSpeed: 5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _StartTime: 15
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.09595469, b: 0, a: 0}
-    - _HighlightsColor: {r: 0.77254903, g: 0.5384062, b: 0.011764725, a: 0}
+    - _BaseColor: {r: 0.3566718, g: 0, b: 0.9622642, a: 0}
+    - _HighlightsColor: {r: 0.04150939, g: 0, b: 0.00118985, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &6556507943719133065
+--- !u!114 &1845038280414314826
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
