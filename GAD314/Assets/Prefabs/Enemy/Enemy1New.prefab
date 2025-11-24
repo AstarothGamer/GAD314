@@ -110,7 +110,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 100
   isDead: 0
-  detectionRange: 15
+  detectionRange: 10
   attackRange: 2.2
   attackCooldown: 1.2
   damage: 15
