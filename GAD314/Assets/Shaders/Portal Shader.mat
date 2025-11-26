@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _HighligtsSpread: 2.5
-    - _MovementSpeed: 0.8
+    - _MovementSpeed: 5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _StartTime: 15
