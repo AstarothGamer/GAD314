@@ -661,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5425651308749244911, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5895530091287146676, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03257215
@@ -713,13 +717,25 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6934160630121185725, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8823117592304964212, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8823117592304964212, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9195600333435276665, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195600333435276665, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -728,6 +744,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5507511346040039213, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8251701428213020032}
+    - targetCorrespondingSourceObject: {fileID: 5507511346040039213, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3409550515603375400}
   m_SourcePrefab: {fileID: 100100000, guid: f557cf988dbd624479f9be605e8b6daf, type: 3}
 --- !u!4 &2734444221594224852 stripped
 Transform:
@@ -768,6 +787,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 3904550133434554592}
+--- !u!65 &3409550515603375400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056915926100205389}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.027, y: 0.042970896, z: 0.017636871}
+  m_Center: {x: 0.0015173, y: 0.013181171, z: -0.00047345625}
 --- !u!1001 &8560921127924869165
 PrefabInstance:
   m_ObjectHideFlags: 0

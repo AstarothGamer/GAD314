@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class MeleeEnemy : Damageable
 {
+    [SerializeField] private Drops drop;
     public float detectionRange = 10f;   
     public float attackRange = 2.2f;    
     public float attackCooldown = 1.2f;  
@@ -125,5 +126,11 @@ public class MeleeEnemy : Damageable
         Quaternion targetRot = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotationSpeed);
     }
+
+    public override void Die()
+    {
+        base.Die();
+        drop.Drop(transform);
+    }   
 }
 
