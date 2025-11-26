@@ -22,19 +22,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.15
+      value: -5.4005127
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.510729
+      value: 6.54545
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.84
+      value: -4.4475718
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8835805
+      value: 0.29366228
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
       propertyPath: m_LocalRotation.x
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.46827936
+      value: -0.95590925
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
       propertyPath: m_LocalRotation.z
@@ -89,6 +89,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9163494502395940816}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6647959193668600862}
   m_SourcePrefab: {fileID: 100100000, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}
 --- !u!1 &161669166393629425 stripped
 GameObject:
@@ -110,6 +113,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 100
   isDead: 0
+  drop: {fileID: -6647959193668600862}
   detectionRange: 10
   attackRange: 2.2
   attackCooldown: 1.2
@@ -161,6 +165,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.52, y: 1.8, z: 0.36}
   m_Center: {x: 0, y: 0.97, z: 0}
+--- !u!114 &-6647959193668600862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161669166393629425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee743c448f76413a92700d4eb02b26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammos: {fileID: 59441610389509160, guid: 48325462ebe1548dc9e6629eac748337, type: 3}
 --- !u!95 &6887588467254696497 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: fd19cdb390d05bd4484015a22b7370ed, type: 3}

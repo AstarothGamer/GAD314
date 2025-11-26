@@ -98,4 +98,14 @@ public class Shooting : MonoBehaviour
         ammoCage = r + i;
         ammoReserve -= i;
     }
+
+    public void GettingAmmo(int amount)
+    {
+        ammoReserve += amount;
+
+        if(ammoReserve > 360)
+        {
+            ammoReserve = 360;
+        }
+    }
 }

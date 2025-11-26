@@ -6,6 +6,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private GameObject mainGun;
     [SerializeField] private GameObject sword;
     [SerializeField] private PlayerDataSO playerSO;
+    [SerializeField] private Shooting gunScript;
 
     public bool katana = false;
     public bool gun = false;
@@ -69,5 +70,15 @@ public class WeaponManager : MonoBehaviour
         //     sword.SetActive(false);
         //     grenadeLouncher.SetActive(true);
         // }
+    }
+
+    public void GettingAmmos(int amount)
+    {
+        gunScript.ammoReserve += amount;
+
+        if(gunScript.ammoReserve > 360)
+        {
+            gunScript.ammoReserve = 360;
+        }
     }
 }
