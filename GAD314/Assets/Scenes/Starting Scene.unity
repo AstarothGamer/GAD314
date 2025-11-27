@@ -44561,7 +44561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3366830106357928558, guid: a738beb6b8806c64f974bec378194000, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3904550133434554592, guid: a738beb6b8806c64f974bec378194000, type: 3}
       propertyPath: swingAngle

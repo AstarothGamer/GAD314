@@ -15,7 +15,7 @@ public class MeleeEnemy : Damageable
     public Transform player;             
     public NavMeshAgent agent;           
 
-    private bool isAttacking = false;
+    public bool isAttacking = false;
     private float lastAttackTime = -99f;
 
     private enum State { Idle, Chasing, Attacking }
@@ -103,12 +103,12 @@ public class MeleeEnemy : Damageable
 
                 yield return new WaitForSeconds(0.4f);
 
-                if (player != null && Vector3.Distance(transform.position, player.position) <= attackRange + 0.3f)
-                {
-                    var damageable = player.GetComponent<PlayerHealth>();
-                    if (damageable != null)
-                        damageable.Damage(damage);
-                }
+                // if (player != null && Vector3.Distance(transform.position, player.position) <= attackRange + 0.3f)
+                // {
+                //     var damageable = player.GetComponent<PlayerHealth>();
+                //     if (damageable != null)
+                //         damageable.Damage(damage);
+                // }
             }
 
             yield return null;
