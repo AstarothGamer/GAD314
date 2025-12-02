@@ -47,6 +47,15 @@ public class Bullet : MonoBehaviour
         {
             //play sound of hit wall or whatever
         }
-        Destroy(gameObject);
+
+        if (other.CompareTag("BulletIgnore"))
+        {
+                
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }
