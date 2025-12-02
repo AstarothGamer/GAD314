@@ -7,10 +7,12 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private GameObject sword;
     [SerializeField] private PlayerDataSO playerSO;
     [SerializeField] private Shooting gunScript;
+    [SerializeField] private GameObject grapGun;
 
     public bool katana = false;
     public bool gun = false;
-    public bool grapplingGun;
+    public bool grapGunOn = false;
+    public bool grapplingGun = false;
     bool gunOn = false;
     bool katanaOn = false;
     // [SerializeField] private GameObject grenadeLouncher;
@@ -64,12 +66,20 @@ public class WeaponManager : MonoBehaviour
             
             // grenadeLouncher.SetActive(false);
         }
-        // else if(Input.GetKeyDown(KeyCode.Alpha3))
-        // {
-        //     mainGun.SetActive(false);
-        //     sword.SetActive(false);
-        //     grenadeLouncher.SetActive(true);
-        // }
+        else if(Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if(grapGunOn)
+            {
+                grapGunOn = false;
+                grapGun.SetActive(false);
+            }
+            else if(grapplingGun)
+            {
+                grapGunOn = true;
+                grapGun.SetActive(true);
+            }
+            
+        }
     }
 
     public void GettingAmmos(int amount)

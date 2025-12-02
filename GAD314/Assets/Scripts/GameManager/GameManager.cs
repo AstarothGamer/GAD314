@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
         {
             playerSO.ResetData();
         }
+
+        Time.timeScale = 1f;
     }
     void Start()
     {

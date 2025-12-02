@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         // transform.position = playerSO.playerPosition;
+        healthText.text = currentHealth.ToString();
     }
 
 
@@ -64,6 +65,7 @@ public class PlayerHealth : MonoBehaviour
         //Play some visual and audio effect
         //for example bloody window, player falls, pertical effects of blood everywhere, sounds of hard breath 
         yield return new WaitForSecondsRealtime(1f);
+        Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         UI.SetActive(false);
         deathPanel.SetActive(true);
