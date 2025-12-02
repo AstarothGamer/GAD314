@@ -8,6 +8,7 @@ TagManager:
   - Gun
   - Katana
   - BulletIgnore
+  - GrapplingGun
   layers:
   - Default
   - TransparentFX
