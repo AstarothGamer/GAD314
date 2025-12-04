@@ -22,9 +22,9 @@ MonoBehaviour:
   - characterName: Judge
     dialogueText: For your death was an accident and not plan.
   - characterName: Judge
-    dialogueText: It was your your friend who had to die.
+    dialogueText: It was your  friend who had to die.
   - characterName: Judge
-    dialogueText: As an appology, we will grant ypu life once more...
+    dialogueText: As an appology, we will grant you life once more...
   - characterName: Judge
     dialogueText: If you can pass the trials of grief.
   - characterName: Judge
