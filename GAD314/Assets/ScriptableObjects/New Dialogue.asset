@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - characterName: Judge
-    dialogueText: Kentarou Senshi
+    dialogueText: Kentarou Senshi.
   - characterName: Judge
     dialogueText: I must inform you that you are dead
   - characterName: Judge
@@ -22,10 +22,10 @@ MonoBehaviour:
   - characterName: Judge
     dialogueText: For your death was an accident and not plan.
   - characterName: Judge
-    dialogueText: It was your your friend who had to die
+    dialogueText: It was your your friend who had to die.
   - characterName: Judge
     dialogueText: As an appology, we will grant ypu life once more...
   - characterName: Judge
-    dialogueText: If you can pass the trilas of grief.
+    dialogueText: If you can pass the trials of grief.
   - characterName: Judge
     dialogueText: Good luck.
