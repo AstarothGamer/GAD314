@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: A1 PDW blend
       objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: ff48c62b950874970b22eb7a3f91effa, type: 3}
+      propertyPath: m_TagString
+      value: GrapplingGun
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: ff48c62b950874970b22eb7a3f91effa, type: 3}
@@ -139,7 +143,7 @@ MonoBehaviour:
   usingGrappling: 0
   whatIsGrappleable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65
   grappleTip: {fileID: 3979180994367544860}
   camera: {fileID: 0}
   player: {fileID: 0}

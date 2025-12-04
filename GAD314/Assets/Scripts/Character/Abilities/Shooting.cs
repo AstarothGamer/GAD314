@@ -78,7 +78,7 @@ public class Shooting : MonoBehaviour
         Quaternion rot = Quaternion.LookRotation(dir);
 
         Instantiate(bulletPrefab, firePoint.transform.position, rot);
-        AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position, 2f);
+        AudioManager.Instance.PlaySoundAtPoint("Project 1 - SMG Shooting 1", firePoint.transform.position, 2f);
     }
     
     public IEnumerator Reload()
