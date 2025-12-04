@@ -13,6 +13,7 @@ public class Shooting : MonoBehaviour
 
     public int ammoCage = 30;
     public int ammoReserve = 60;
+    private bool reloading = false;
 
     private float timer = 0.2f;
     // [SerializeField] 
@@ -43,7 +44,7 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (ammoCage < 30)
+            if (ammoCage < 30 && !reloading)
             {
                 //play annimation of reload
                 //play sound of reload
@@ -82,6 +83,7 @@ public class Shooting : MonoBehaviour
     
     public IEnumerator Reload()
     {
+        reloading = true;
         int i = 30 - ammoCage;
         int r = ammoCage;
         ammoCage = 0;
@@ -97,6 +99,7 @@ public class Shooting : MonoBehaviour
         
         ammoCage = r + i;
         ammoReserve -= i;
+        reloading = false;
     }
 
     public void GettingAmmo(int amount)

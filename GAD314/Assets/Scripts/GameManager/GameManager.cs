@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
             playerSO.ResetData();
         }
 
+        StartCoroutine(Loading());
+
         Time.timeScale = 1f;
     }
     void Start()
@@ -30,11 +33,13 @@ public class GameManager : MonoBehaviour
         {
             if (menuPanel.activeSelf == false)
             {
+                Time.timeScale = 0f;
                 Cursor.lockState = CursorLockMode.None;
                 menuPanel.SetActive(true);
             }
             else
             {
+                Time.timeScale = 1f;
                 Cursor.lockState = CursorLockMode.Locked;
                 menuPanel.SetActive(false);
             }
@@ -43,17 +48,24 @@ public class GameManager : MonoBehaviour
 
     public void LoadLastSave()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void ReloadScene()
     {
         playerSO.ResetData();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     
     public void ExitToMainMenu()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public IEnumerator Loading()
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSeconds(2);
+        Time.timeScale = 1f;
     }
 }
