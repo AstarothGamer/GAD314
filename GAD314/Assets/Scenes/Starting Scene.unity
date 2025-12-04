@@ -32059,7 +32059,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: -0.19, y: 0.67, z: 0.75}
+  m_Size: {x: 0.18, y: 0.67, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2067869315 stripped
 Transform:
@@ -33607,10 +33607,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3732164142304962025, guid: c6cc984430b264d548255ca1d05f9da2, type: 3}
-      propertyPath: m_TagString
-      value: GrapplingGun
-      objectReference: {fileID: 0}
     - target: {fileID: 7595911544210293585, guid: c6cc984430b264d548255ca1d05f9da2, type: 3}
       propertyPath: camera
       value: 
@@ -33619,10 +33615,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 724967085}
-    - target: {fileID: 7595911544210293585, guid: c6cc984430b264d548255ca1d05f9da2, type: 3}
-      propertyPath: whatIsGrappleable.m_Bits
-      value: 65
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
