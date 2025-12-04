@@ -15,16 +15,14 @@ public class PlayerHealth : MonoBehaviour
 
 
 
-    void Awake()
-    {
-        currentHealth = maxHealth;
-        healthText.text = currentHealth.ToString();
-        // transform.position = playerSO.playerPosition;
-        currentHealth = playerSO.hp;
-    }
+    // void Awake()
+    // {
+    //     currentHealth = maxHealth;
+    //     healthText.text = currentHealth.ToString();        
+    // }
     void Start()
     {
-        // transform.position = playerSO.playerPosition;
+        currentHealth = playerSO.hp;
         healthText.text = currentHealth.ToString();
     }
 

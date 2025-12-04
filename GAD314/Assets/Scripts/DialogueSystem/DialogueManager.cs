@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public float textSpeed = 0.05f;
-    public string nextSceneName;
+    public int nextSceneIndex;
 
     private Dialogue currentDialogue;
     private int currentLineIndex;
@@ -99,10 +99,11 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
         dialogueBox.SetActive(false);
+        nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if (!string.IsNullOrEmpty(nextSceneName))
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(nextSceneName);
+            SceneManager.LoadScene(nextSceneIndex);
         }
     }
 }
