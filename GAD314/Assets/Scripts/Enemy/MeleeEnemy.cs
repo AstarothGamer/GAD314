@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class MeleeEnemy : Damageable
 {
     [SerializeField] private Drops drop;
+    [HideInInspector] public EnemySpawner spawner;
     public float detectionRange = 10f;   
     public float attackRange = 2.2f;    
     public float attackCooldown = 1.2f;  
@@ -129,6 +130,10 @@ public class MeleeEnemy : Damageable
 
     public override void Die()
     {
+        if (spawner != null)
+        {
+            spawner.OnSpawnedEnemyDie();
+        }
         base.Die();
         drop.Drop(transform);
     }   

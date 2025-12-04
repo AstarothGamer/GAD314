@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private Portal portal;
     //enemy prefab i want to spawn
     public GameObject enemyPrefab;
 
@@ -19,6 +20,9 @@ public class EnemySpawner : MonoBehaviour
 
     // this will tell me if the player is inside the trigger
     private bool playerIsHere = false;
+
+    public bool allSpawnedDead = false;
+    private int enemyDead;
 
     void Start()
     {
@@ -59,10 +63,27 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         // spawn at the same spot as this spawner
-        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        GameObject enemyObj = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+
+        MeleeEnemy enemy = enemyObj.GetComponent<MeleeEnemy>();
+        if(enemy != null)
+        {
+            enemy.spawner = this;
+        }
 
         // add 1 enemy to the count
         enemyCount++;
+    }
+
+    public void OnSpawnedEnemyDie()
+    {
+        enemyDead++;
+
+        if(enemyDead >= enemyCount && enemyCount >= maxEnemies)
+        {
+            allSpawnedDead = true;
+            portal.ActivatePortal();
+        }
     }
 
     // when something enters the trigger
