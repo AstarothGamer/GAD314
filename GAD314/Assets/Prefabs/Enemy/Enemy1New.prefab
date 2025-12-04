@@ -120,7 +120,7 @@ MonoBehaviour:
   maxHealth: 100
   isDead: 0
   drop: {fileID: -6647959193668600862}
-  detectionRange: 10
+  detectionRange: 13
   attackRange: 3
   attackCooldown: 1.2
   damage: 15
