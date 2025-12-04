@@ -11,9 +11,9 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] private AnimationCurve swingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     [SerializeField] public float damage = 25f;
-    [SerializeField] private float reach = 2f;
-    [SerializeField] private float hitRadius = 2f;
-    [SerializeField] private LayerMask hitMask;
+    // [SerializeField] private float reach = 2f;
+    // [SerializeField] private float hitRadius = 2f;
+    // [SerializeField] private LayerMask hitMask;
     [SerializeField] private float attackCooldown = 0.4f;
 
 

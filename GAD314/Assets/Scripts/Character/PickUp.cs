@@ -38,7 +38,7 @@ public class PickUp : MonoBehaviour
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
         
 
-        if (Physics.Raycast(ray, out hit, 4f))
+        if (Physics.Raycast(ray, out hit, 7f))
         {
             if (hit.collider.CompareTag("Gun"))
             {
@@ -50,6 +50,12 @@ public class PickUp : MonoBehaviour
             {
                 pickUpPanel.SetActive(true);
                 pickUpText.text = "Press E to pick up the katana";
+                inArea = true;
+            }
+            else if (hit.collider.CompareTag("GrapplingGun"))
+            {
+                pickUpPanel.SetActive(true);
+                pickUpText.text = "Press E to pick up the grappling gun";
                 inArea = true;
             }
         }
@@ -71,6 +77,11 @@ public class PickUp : MonoBehaviour
         {
             hit.collider.GetComponentInParent<Item>().PickedUp();
             weaponManager.gun = true;
+        }
+        else if(hit.collider.GetComponentInParent<GrapGun>())
+        {
+            hit.collider.GetComponentInParent<Item>().PickedUp();
+            weaponManager.grapplingGun = true;
         }
     }
 }
