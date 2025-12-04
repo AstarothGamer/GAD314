@@ -13,9 +13,19 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   dialogueLines:
-  - characterName: Test
-    dialogueText: Hello world
-  - characterName: Test
-    dialogueText: this is a test
-  - characterName: Test
-    dialogueText: Testing SPPPEEEEEEEEEDDDDDD
+  - characterName: Judge
+    dialogueText: Kentarou Senshi
+  - characterName: Judge
+    dialogueText: I must inform you that you are dead
+  - characterName: Judge
+    dialogueText: But we did not intend for you to die.
+  - characterName: Judge
+    dialogueText: For your death was an accident and not plan.
+  - characterName: Judge
+    dialogueText: It was your your friend who had to die
+  - characterName: Judge
+    dialogueText: As an appology, we will grant ypu life once more...
+  - characterName: Judge
+    dialogueText: If you can pass the trilas of grief.
+  - characterName: Judge
+    dialogueText: Good luck.
