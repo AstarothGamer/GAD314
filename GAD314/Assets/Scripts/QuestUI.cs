@@ -7,9 +7,9 @@ public class QuestUI : MonoBehaviour
     public TMP_Text questText;
 
     // references to the player's weapons
-    public GameObject katanaObject;
-    public GameObject gunObject;
-
+    public GameObject katanaObject;   
+    public GameObject gunObject;      
+    
 
     void Update()
     {
