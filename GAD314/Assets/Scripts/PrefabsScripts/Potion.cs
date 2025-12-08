@@ -20,6 +20,7 @@ public class Potion : MonoBehaviour
         {
             int healAmount = Random.Range(20, 30);
             other.GetComponent<PlayerHealth>().Heal(healAmount);
+            AudioManager.Instance.PlaySoundAtPoint("Medkit_Pickup", transform.position);
             Destroy(gameObject);
         }
     }

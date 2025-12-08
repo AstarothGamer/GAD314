@@ -136,6 +136,12 @@ public class MeleeEnemy : Damageable
         }
         base.Die();
         drop.Drop(transform);
-    }   
+    }
+
+    public override void Damage(float damage)
+    {
+        base.Damage(damage);
+        AudioManager.Instance.PlaySoundAtPoint("Enemy Hit 1", transform.position);
+    }
 }
 

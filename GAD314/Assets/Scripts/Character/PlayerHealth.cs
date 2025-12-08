@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         //Here should be added sound of getting damage
         //below as an example how to use function to play a sound once
-        // AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position);
+        AudioManager.Instance.PlaySoundAtPoint("Player Hit 1", transform.position);
         // in transform just add transform.position , because it should be played at players position
         // ot you can add it into script DamageToPlayer when it calls Damage(), if we want to play sound at the accurate place where player gets hit
         if (currentHealth <= 0) StartCoroutine(Die());
