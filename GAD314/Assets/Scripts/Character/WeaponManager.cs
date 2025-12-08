@@ -11,8 +11,9 @@ public class WeaponManager : MonoBehaviour
 
     public bool katana = false;
     public bool gun = false;
-    public bool grapGunOn = false;
     public bool grapplingGun = false;
+    
+    public bool grapGunOn = false;
     bool gunOn = false;
     bool katanaOn = false;
     // [SerializeField] private GameObject grenadeLouncher;

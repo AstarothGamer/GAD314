@@ -8287,8 +8287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questText: {fileID: 1246401210}
-  katanaObject: {fileID: 2058963249}
-  gunObject: {fileID: 2058963250}
+  weapon: {fileID: 150852143}
 --- !u!1 &617644462 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3445761335453916687, guid: c6cc984430b264d548255ca1d05f9da2, type: 3}
@@ -26008,7 +26007,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1450890895278447136, guid: a738beb6b8806c64f974bec378194000, type: 3}
   m_PrefabInstance: {fileID: 2058963248}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058963250}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1cf8044cf1a64d6da25e398527f4b85, type: 3}
@@ -32154,16 +32153,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1106131156}
   m_SourcePrefab: {fileID: 100100000, guid: a738beb6b8806c64f974bec378194000, type: 3}
---- !u!1 &2058963249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2283244628696555676, guid: a738beb6b8806c64f974bec378194000, type: 3}
-  m_PrefabInstance: {fileID: 2058963248}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2058963250 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8094507625419127318, guid: a738beb6b8806c64f974bec378194000, type: 3}
-  m_PrefabInstance: {fileID: 2058963248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2061428419
 PrefabInstance:
   m_ObjectHideFlags: 0
