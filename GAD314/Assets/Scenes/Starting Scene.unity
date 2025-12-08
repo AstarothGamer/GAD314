@@ -8244,6 +8244,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9535ca929b758564abef697f1e30f811, type: 3}
+--- !u!1 &584831857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6583964750773848428, guid: 895f6708eeef640c0b94023952791899, type: 3}
+  m_PrefabInstance: {fileID: 269567347925873424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &587834926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5933112088363390005, guid: 2ee40803452267b418b17dab8a858157, type: 3}
@@ -8439,7 +8444,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7595911544210293585, guid: c6cc984430b264d548255ca1d05f9da2, type: 3}
   m_PrefabInstance: {fileID: 3101191734823122207}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 617644462}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca50d90525b76084aa0f8ee3e13eb5bb, type: 3}
@@ -27470,6 +27475,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ee40803452267b418b17dab8a858157, type: 3}
+--- !u!1 &1501407585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 147401560911053444, guid: 895f6708eeef640c0b94023952791899, type: 3}
+  m_PrefabInstance: {fileID: 269567347925873424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1504450405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5933112088363390005, guid: 2ee40803452267b418b17dab8a858157, type: 3}
@@ -27792,6 +27802,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 681606965661974603, guid: b1f8aeb1b0188bf4cb1df7ecbfae70bf, type: 3}
   m_PrefabInstance: {fileID: 1316177349}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1587556941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3904550133434554592, guid: a738beb6b8806c64f974bec378194000, type: 3}
+  m_PrefabInstance: {fileID: 2058963248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab474319753c84c81b2f325a7967f837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1587976056
 GameObject:
   m_ObjectHideFlags: 0
@@ -31224,7 +31245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 350, y: -123}
+  m_AnchoredPosition: {x: -350.00003, y: -208.39998}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922567962
@@ -32308,9 +32329,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 617644462}
     - target: {fileID: 8009397674770943032, guid: a738beb6b8806c64f974bec378194000, type: 3}
+      propertyPath: swordUI
+      value: 
+      objectReference: {fileID: 1501407585}
+    - target: {fileID: 8009397674770943032, guid: a738beb6b8806c64f974bec378194000, type: 3}
+      propertyPath: grapGunUI
+      value: 
+      objectReference: {fileID: 1922567960}
+    - target: {fileID: 8009397674770943032, guid: a738beb6b8806c64f974bec378194000, type: 3}
       propertyPath: gunScript
       value: 
       objectReference: {fileID: 1374800664}
+    - target: {fileID: 8009397674770943032, guid: a738beb6b8806c64f974bec378194000, type: 3}
+      propertyPath: mainGunUI
+      value: 
+      objectReference: {fileID: 584831857}
+    - target: {fileID: 8009397674770943032, guid: a738beb6b8806c64f974bec378194000, type: 3}
+      propertyPath: grapScript
+      value: 
+      objectReference: {fileID: 617644466}
+    - target: {fileID: 8009397674770943032, guid: a738beb6b8806c64f974bec378194000, type: 3}
+      propertyPath: swordScript
+      value: 
+      objectReference: {fileID: 1587556941}
     - target: {fileID: 8904344803839431453, guid: a738beb6b8806c64f974bec378194000, type: 3}
       propertyPath: m_LocalPosition.x
       value: 776.19
@@ -33479,6 +33520,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 147401560911053444, guid: 895f6708eeef640c0b94023952791899, type: 3}
+      propertyPath: m_Name
+      value: Kataba
+      objectReference: {fileID: 0}
     - target: {fileID: 779738672674213440, guid: 895f6708eeef640c0b94023952791899, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1220022
@@ -33718,6 +33763,10 @@ PrefabInstance:
     - target: {fileID: 5799388251362673441, guid: 895f6708eeef640c0b94023952791899, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583964750773848428, guid: 895f6708eeef640c0b94023952791899, type: 3}
+      propertyPath: m_Name
+      value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 7347739850107418190, guid: 895f6708eeef640c0b94023952791899, type: 3}
       propertyPath: m_IsActive

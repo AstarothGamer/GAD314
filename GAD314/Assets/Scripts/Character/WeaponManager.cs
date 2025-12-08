@@ -1,18 +1,28 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class WeaponManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainGun;
     [SerializeField] private GameObject sword;
+    [SerializeField] private GameObject grapGun;
+
+    [SerializeField] private GameObject mainGunUI;
+    [SerializeField] private GameObject swordUI;
+    [SerializeField] private GameObject grapGunUI;
+
     [SerializeField] private PlayerDataSO playerSO;
     [SerializeField] private Shooting gunScript;
-    [SerializeField] private GameObject grapGun;
+    [SerializeField] private MeleeAttack swordScript;
+    [SerializeField] private GrapplingGun grapScript;
+    
 
     public bool katana = false;
     public bool gun = false;
     public bool grapplingGun = false;
-    
+
     public bool grapGunOn = false;
     bool gunOn = false;
     bool katanaOn = false;
@@ -38,12 +48,15 @@ public class WeaponManager : MonoBehaviour
             if(gunOn)
             {
                 mainGun.SetActive(false);
+                mainGunUI.GetComponent<Image>().color = new Color32(130, 21, 14, 25);
                 gunOn = false;
             }
             else if (gun)
             {
                 katanaOn = false;
                 gunOn = true;
+                mainGunUI.GetComponent<Image>().color = new Color32(255, 20, 0, 90);
+                swordUI.GetComponent<Image>().color = new Color32(130, 21, 14, 25);
                 mainGun.SetActive(true);
                 sword.SetActive(false);
             }
@@ -55,12 +68,15 @@ public class WeaponManager : MonoBehaviour
             if(katanaOn)
             {
                 katanaOn = false;
+                swordUI.GetComponent<Image>().color = new Color32(130, 21, 14, 25);
                 sword.SetActive(false);
             }
-            else if (katana)
+            else if (katana && !swordScript.isSwinging)
             {
                 gunOn = false;
                 katanaOn = true;
+                mainGunUI.GetComponent<Image>().color = new Color32(130, 21, 14, 25);
+                swordUI.GetComponent<Image>().color = new Color32(255, 20, 0, 90);
                 mainGun.SetActive(false);
                 sword.SetActive(true);
             }
@@ -72,11 +88,13 @@ public class WeaponManager : MonoBehaviour
             if(grapGunOn)
             {
                 grapGunOn = false;
+                grapGunUI.GetComponent<Image>().color = new Color32(130, 21, 14, 25);
                 grapGun.SetActive(false);
             }
-            else if(grapplingGun)
+            else if(grapplingGun && !grapScript.usingGrappling)
             {
                 grapGunOn = true;
+                grapGunUI.GetComponent<Image>().color = new Color32(255, 20, 0, 90);
                 grapGun.SetActive(true);
             }
             
