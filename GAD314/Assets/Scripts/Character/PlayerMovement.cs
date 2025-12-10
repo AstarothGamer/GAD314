@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 normalVector = Vector3.up;
     private Vector3 wallNormalVector;
 
+    // public bool used = false;
+
     void Awake()
     {
         // Initialize the Rigidbody component

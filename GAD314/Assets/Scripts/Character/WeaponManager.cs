@@ -65,13 +65,13 @@ public class WeaponManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if(katanaOn)
+            if(katanaOn && !swordScript.isSwinging)
             {
                 katanaOn = false;
                 swordUI.GetComponent<Image>().color = new Color32(130, 21, 14, 25);
                 sword.SetActive(false);
             }
-            else if (katana && !swordScript.isSwinging)
+            else if (katana)
             {
                 gunOn = false;
                 katanaOn = true;
@@ -85,13 +85,13 @@ public class WeaponManager : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.Alpha3))
         {
-            if(grapGunOn)
+            if(grapGunOn && !grapScript.usingGrappling)
             {
                 grapGunOn = false;
                 grapGunUI.GetComponent<Image>().color = new Color32(130, 21, 14, 25);
                 grapGun.SetActive(false);
             }
-            else if(grapplingGun && !grapScript.usingGrappling)
+            else if(grapplingGun)
             {
                 grapGunOn = true;
                 grapGunUI.GetComponent<Image>().color = new Color32(255, 20, 0, 90);

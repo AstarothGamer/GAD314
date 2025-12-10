@@ -83,5 +83,7 @@ public class PickUp : MonoBehaviour
             hit.collider.GetComponentInParent<Item>().PickedUp();
             weaponManager.grapplingGun = true;
         }
+
+        pickUpPanel.SetActive(false);
     }
 }

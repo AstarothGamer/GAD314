@@ -19,6 +19,8 @@ public class Shooting : MonoBehaviour
      private int ammoBeforeReload;  
 
     private float timer = 0.2f;
+
+    public bool used = false;
     // [SerializeField] 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -62,6 +64,7 @@ public class Shooting : MonoBehaviour
     private void Shoot()
     {
         ammoCage--;
+        used = true;
 
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
