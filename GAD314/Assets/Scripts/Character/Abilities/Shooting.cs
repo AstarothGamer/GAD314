@@ -15,7 +15,12 @@ public class Shooting : MonoBehaviour
     public int ammoReserve = 60;
     private bool reloading = false;
 
+    private Coroutine reloadCoroutine;
+     private int ammoBeforeReload;  
+
     private float timer = 0.2f;
+
+    public bool used = false;
     // [SerializeField] 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -59,6 +64,7 @@ public class Shooting : MonoBehaviour
     private void Shoot()
     {
         ammoCage--;
+        used = true;
 
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
@@ -83,6 +89,7 @@ public class Shooting : MonoBehaviour
     
     public IEnumerator Reload()
     {
+        ammoBeforeReload = ammoCage;
         reloading = true;
         int i = 30 - ammoCage;
         int r = ammoCage;
@@ -100,6 +107,22 @@ public class Shooting : MonoBehaviour
         ammoCage = r + i;
         ammoReserve -= i;
         reloading = false;
+    }
+
+    private void OnDisable()
+    {
+        if (reloading)
+        {
+            if (reloadCoroutine != null)
+            {
+                StopCoroutine(reloadCoroutine);
+                reloadCoroutine = null;
+            }
+
+            ammoCage = ammoBeforeReload;
+
+            reloading = false;
+        }
     }
 
     public void GettingAmmo(int amount)

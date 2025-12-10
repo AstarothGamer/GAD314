@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private TMP_Text healthText;
 
     [SerializeField] private PlayerDataSO playerSO;
+    [SerializeField] private GameObject DamagePanel;
 
 
 
@@ -33,13 +35,15 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         //Here should be added sound of getting damage
         //below as an example how to use function to play a sound once
-        // AudioManager.Instance.PlaySoundAtPoint("gun-fire", firePoint.transform.position);
+        AudioManager.Instance.PlaySoundAtPoint("Player Hit 1", transform.position);
         // in transform just add transform.position , because it should be played at players position
         // ot you can add it into script DamageToPlayer when it calls Damage(), if we want to play sound at the accurate place where player gets hit
         if (currentHealth <= 0) StartCoroutine(Die());
 
         Debug.Log("Player got " + damage + " damage. Now you have " + currentHealth + " hp");
         healthText.text = currentHealth.ToString();
+        float a = 1f - (currentHealth * 1f / maxHealth);
+        DamagePanel.GetComponent<Image>().color = new Color(1, 1, 1, a);
     }
 
     public void Heal(int amount)
@@ -55,6 +59,8 @@ public class PlayerHealth : MonoBehaviour
         }
         healthText.text = currentHealth.ToString();
         Debug.Log("Healed to " + amount);
+        float a = 1f - (currentHealth * 1f / maxHealth);
+        DamagePanel.GetComponent<Image>().color = new Color(1, 1, 1, a);
     }
     
     private IEnumerator Die()

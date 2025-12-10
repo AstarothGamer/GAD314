@@ -23,6 +23,8 @@ public class MeleeAttack : MonoBehaviour
 
     private Camera cam;
 
+    public bool used = false;
+
     void Start()
     {
         
@@ -58,6 +60,7 @@ public class MeleeAttack : MonoBehaviour
     private IEnumerator PerformSwing()
     {
         isSwinging = true;
+        used = true;
 
         float halfDuration = swingDuration * 0.5f;
         float t = 0f;

@@ -1,4 +1,4 @@
-using UnityEngine;
+    using UnityEngine;
 
 public class PlayerMovement2 : MonoBehaviour
 {
@@ -27,6 +27,8 @@ public class PlayerMovement2 : MonoBehaviour
     public bool isGrounded;
     private bool isRunning;
     private float currentSpeed;
+
+    public bool m, r, j = false;
 
     void Start()
     {
@@ -80,7 +82,11 @@ public class PlayerMovement2 : MonoBehaviour
         Vector3 targetVelocity = moveInput * currentSpeed;
 
         if (moveInput.magnitude > 0.1f)
+        {
             moveVelocity = Vector3.Lerp(moveVelocity, targetVelocity, acceleration * Time.unscaledDeltaTime);
+            m = true;
+            if(isRunning) r = true;   
+        }
         else
             moveVelocity = Vector3.Lerp(moveVelocity, Vector3.zero, deceleration * Time.unscaledDeltaTime);
 
@@ -89,7 +95,7 @@ public class PlayerMovement2 : MonoBehaviour
 
     private void Run()
     {
-        isRunning = Input.GetKey(KeyCode.LeftShift);
+        isRunning = Input.GetKey(KeyCode.LeftShift);    
     }
 
     private void Jump()
@@ -98,6 +104,8 @@ public class PlayerMovement2 : MonoBehaviour
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z); 
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+            j = true;
         }
     }
 
