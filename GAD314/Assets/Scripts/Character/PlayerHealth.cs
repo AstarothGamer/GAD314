@@ -1,6 +1,8 @@
 using System.Collections;
 using TMPro;
+using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private TMP_Text healthText;
 
     [SerializeField] private PlayerDataSO playerSO;
+    [SerializeField] private GameObject DamagePanel;
 
 
 
@@ -40,6 +43,8 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("Player got " + damage + " damage. Now you have " + currentHealth + " hp");
         healthText.text = currentHealth.ToString();
+        float a = 1f - (currentHealth * 1f / maxHealth);
+        DamagePanel.GetComponent<Image>().color = new Color(1, 1, 1, a);
     }
 
     public void Heal(int amount)
@@ -55,6 +60,8 @@ public class PlayerHealth : MonoBehaviour
         }
         healthText.text = currentHealth.ToString();
         Debug.Log("Healed to " + amount);
+        float a = 1f - (currentHealth * 1f / maxHealth);
+        DamagePanel.GetComponent<Image>().color = new Color(1, 1, 1, a);
     }
     
     private IEnumerator Die()

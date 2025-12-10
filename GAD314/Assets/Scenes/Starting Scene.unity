@@ -8104,6 +8104,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5021781536379366030, guid: 096d1aa962cd05f43a7501500c1d64d0, type: 3}
   m_PrefabInstance: {fileID: 7993032397870287472}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &408932165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1693017219245284103, guid: 895f6708eeef640c0b94023952791899, type: 3}
+  m_PrefabInstance: {fileID: 269567347925873424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &424845023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5671543191972442472, guid: 8961ae56216e24a0a8df97b86cf4e3fb, type: 3}
@@ -35609,6 +35614,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 818949348}
+    - target: {fileID: 6099918802686722921, guid: a738beb6b8806c64f974bec378194000, type: 3}
+      propertyPath: DamagePanel
+      value: 
+      objectReference: {fileID: 408932165}
     - target: {fileID: 8009397674770943032, guid: a738beb6b8806c64f974bec378194000, type: 3}
       propertyPath: swordUI
       value: 
@@ -36791,18 +36800,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1135582067259157803, guid: 895f6708eeef640c0b94023952791899, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1135582067259157803, guid: 895f6708eeef640c0b94023952791899, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1135582067259157803, guid: 895f6708eeef640c0b94023952791899, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1200383738736352757, guid: 895f6708eeef640c0b94023952791899, type: 3}
       propertyPath: weapon
       value: 
@@ -36889,14 +36886,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4372899730174181204, guid: 895f6708eeef640c0b94023952791899, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5573803651822562779, guid: 895f6708eeef640c0b94023952791899, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5573803651822562779, guid: 895f6708eeef640c0b94023952791899, type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
