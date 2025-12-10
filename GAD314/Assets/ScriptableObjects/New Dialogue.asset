@@ -16,16 +16,42 @@ MonoBehaviour:
   - characterName: Judge
     dialogueText: Kentarou Senshi.
   - characterName: Judge
-    dialogueText: I must inform you that you are dead
+    dialogueText: Age 27 and the subordinate of the Yakuza clan.
   - characterName: Judge
-    dialogueText: But we did not intend for you to die.
+    dialogueText: Seconds ago, a fire broke out in one your leaders hideouts.
+  - characterName: Judge
+    dialogueText: 'And your proclaimed freind, Juudai Dorakuma, was trapped there.   '
+  - characterName: Judge
+    dialogueText: When you tried to save him, you were traped under the rubble.
+  - characterName: Judge
+    dialogueText: He had plenty of time to help you. But because you happened to
+      accidently peaked inside his suitcase...
+  - characterName: Judge
+    dialogueText: ...he abandoned you.
+  - characterName: Judge
+    dialogueText: Kentaroue Senshi, I must inform you that you are dead.
+  - characterName: Narrator
+    dialogueText: 'Kentarou didn''t move nor made any sound. He simply looked at
+      the ground aimlessly with no light in his eyes. '
+  - characterName: Narrator
+    dialogueText: It was as if he became a dead fish in a fish market.
+  - characterName: Judge
+    dialogueText: However, we did not intended for you to die.
   - characterName: Judge
     dialogueText: For your death was an accident and not plan.
   - characterName: Judge
     dialogueText: It was your  friend who had to die.
   - characterName: Judge
-    dialogueText: As an appology, we will grant you life once more...
+    dialogueText: As an appology, we will grant you life once more.
   - characterName: Judge
     dialogueText: If you can pass the trials of grief.
+  - characterName: Judge
+    dialogueText: Do you accept?
+  - characterName: Kentarou Senshi
+    dialogueText: ...
+  - characterName: Judge
+    dialogueText: I take it your silence means yes?
+  - characterName: Kentarou Senshi
+    dialogueText: (Nods)
   - characterName: Judge
     dialogueText: Good luck.
