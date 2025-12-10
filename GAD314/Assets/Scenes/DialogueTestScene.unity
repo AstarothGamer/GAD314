@@ -602,6 +602,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1190137963093319777, guid: bd8105ae9ee4a584a9c07c9109588431, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 42.08334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190137963093319777, guid: bd8105ae9ee4a584a9c07c9109588431, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030600556378425090, guid: bd8105ae9ee4a584a9c07c9109588431, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -159.16664
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030600556378425090, guid: bd8105ae9ee4a584a9c07c9109588431, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -105
+      objectReference: {fileID: 0}
     - target: {fileID: 5806359934976768140, guid: bd8105ae9ee4a584a9c07c9109588431, type: 3}
       propertyPath: m_Name
       value: Cutscene Canvas
