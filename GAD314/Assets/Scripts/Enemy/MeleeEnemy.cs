@@ -134,6 +134,14 @@ public class MeleeEnemy : Damageable
         {
             spawner.OnSpawnedEnemyDie();
         }
+        
+        KeyDrop keyDrop = GetComponent<KeyDrop>();
+
+        if(keyDrop != null)
+        {
+            keyDrop.DropKey();
+        }
+
         base.Die();
         drop.Drop(transform);
     }
