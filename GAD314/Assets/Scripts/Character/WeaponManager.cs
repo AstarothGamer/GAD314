@@ -51,7 +51,7 @@ public class WeaponManager : MonoBehaviour
                 mainGunUI.GetComponent<Image>().color = new Color32(130, 21, 14, 25);
                 gunOn = false;
             }
-            else if (gun)
+            else if (gun && !swordScript.isSwinging)
             {
                 katanaOn = false;
                 gunOn = true;
